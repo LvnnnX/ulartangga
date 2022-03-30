@@ -31,3 +31,8 @@ Ketika poin anda mencapai 100, anda akan menang dan permainan akan berhenti
 
 Ketika anda memilih surrender, anda akan menjadi tim yang sudah menyerah dan tidak dapat bermain lagi, namun poin anda akan tetap tersimpan dalam sistem dan akan tetap masuk di dalam ladderboard
 Selamat bermain!
+
+
+#Contributor
+display = @madeputrateg
+mechanic = @LvnnnX
