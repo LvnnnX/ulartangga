@@ -30,9 +30,10 @@ Ketika anda memilih untuk roll dice, anda akan mendapatkan angka secara acak mul
 Ketika poin anda mencapai 100, anda akan menang dan permainan akan berhenti
 
 Ketika anda memilih surrender, anda akan menjadi tim yang sudah menyerah dan tidak dapat bermain lagi, namun poin anda akan tetap tersimpan dalam sistem dan akan tetap masuk di dalam ladderboard
+Ketika total pemain - 1 sudah surrender (menyerah) maka permainan akan terhenti dan pemain yang tidak menyerah akan menjadi pemenangnya
 Selamat bermain!
 
 
 #Contributor
-display = @madeputrateg
+display = @madeputrateg \n
 mechanic = @LvnnnX
