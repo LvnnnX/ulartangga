@@ -35,5 +35,7 @@ Selamat bermain!
 
 
 #Contributor
-display = @madeputrateg \n
+
+display = @madeputrateg 
+
 mechanic = @LvnnnX
