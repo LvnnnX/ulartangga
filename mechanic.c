@@ -8,11 +8,6 @@ int roll_dice(int dice_amount){
     if(random_dice % dice_amount == 0) return dice_amount;
     else return random_dice % dice_amount;
 }
-void delay(){
-    int mili_seconds = 1000;
-    clock_t start_time = clock();
-    while (clock() < start_time + mili_seconds);
-}
 void win_condition(int player_now){
     printf("Player %d has won the game!\n",player_now+1);
 }
