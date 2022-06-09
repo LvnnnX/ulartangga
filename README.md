@@ -39,6 +39,4 @@ Selamat bermain!
 
 #Contributor
 
-display = @madeputrateg 
 
-mechanic = @LvnnnX
