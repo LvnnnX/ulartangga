@@ -11,9 +11,9 @@ int roll_dice(int dice_amount){
 void win_condition(int player_now){
     printf("Player %d has won the game!\n",player_now+1);
 }
-void ladderboard(int player[], int banyak_pemain,int surrender[]){
-    int sort, ladderboard[banyak_pemain-1], cekwin = 0,tempwin = 0;
-    for(int x = 0; x < banyak_pemain; x++) ladderboard[x] = x+1;
+void leaderboard(int player[], int banyak_pemain,int surrender[]){
+    int sort, leaderboard[banyak_pemain-1], cekwin = 0,tempwin = 0;
+    for(int x = 0; x < banyak_pemain; x++) leaderboard[x] = x+1;
     for(int x = 0; x< banyak_pemain; x++){
         if(player[x] != -1) cekwin++;
     }
@@ -34,15 +34,15 @@ void ladderboard(int player[], int banyak_pemain,int surrender[]){
                 sort = player[x];
                 player[x] = player[y];
                 player[y] = sort;
-                sort = ladderboard[x];
-                ladderboard[x] = ladderboard[y];
-                ladderboard[y] = sort;
+                sort = leaderboard[x];
+                leaderboard[x] = leaderboard[y];
+                leaderboard[y] = sort;
             }
         }
     }
     if (cekwin == 1) player[0] = tempwin;
-    printf("Current Ladderboard :\n");
-    for(int x = 0; x < banyak_pemain; x++) printf("Rank %d : Player %d - %d points\n",x+1,ladderboard[x],player[x]+1);
+    printf("Current leaderboard :\n");
+    for(int x = 0; x < banyak_pemain; x++) printf("Rank %d : Player %d - %d points\n",x+1,leaderboard[x],player[x]+1);
     printf("\n\n");
 }
 int start(int  langkah_maksimal,int pemain){
@@ -87,7 +87,7 @@ int start(int  langkah_maksimal,int pemain){
                             break;
                         }
                     }
-                    ladderboard(player,pemain,surrender_status);
+                    leaderboard(player,pemain,surrender_status);
                     return 0;
                 }
             }else{
@@ -103,7 +103,7 @@ int start(int  langkah_maksimal,int pemain){
                         system("cls");
                         display(player,tangga,uler);
                         win_condition(x);
-                        ladderboard(player,pemain,surrender_status);
+                        leaderboard(player,pemain,surrender_status);
                         return 0;
                     }
                     else if (player[x] >= 100){
@@ -126,7 +126,7 @@ int start(int  langkah_maksimal,int pemain){
                         system("cls");
                         display(player,tangga,uler);
                         printf("All players has surrendered, game stopped!\n");
-                        ladderboard(player,pemain,surrender_status);
+                        leaderboard(player,pemain,surrender_status);
                         return 0;
                     }
                     break;
